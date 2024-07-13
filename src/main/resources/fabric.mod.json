@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "mace-portback-fabric",
+	"version": "${version}",
+	"name": "Mace Portback Fabric",
+	"description": "This is a backport mod for the mace added in Minecraft version 1.21, made for version 1.20.1. While Forge versions already exist, I couldn't find any Fabric versions, so I decided to make my own. Hope you enjoy!",
+	"authors": [
+		"Luna"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mace-portback-fabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.luna.maceportbackfabric.MacePortbackFabric"
+		],
+		"client": [
+			"net.luna.maceportbackfabric.MacePortbackFabricClient"
+		],
+		"fabric-datagen": [
+			"net.luna.maceportbackfabric.MacePortbackFabricDataGenerator"
+		]
+	},
+	"mixins": [
+		"mace-portback-fabric.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
